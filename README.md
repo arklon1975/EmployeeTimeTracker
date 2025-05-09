@@ -41,3 +41,15 @@ Estructura de Archivos Importante:
 /shared: Contiene código compartido entre frontend y backend
 drizzle.config.ts: Configuración de la base de datos
 package.json: Scripts y dependencias del proyecto
+
+Estructura de despliegue:
+El frontend se construye con Vite y se sirve desde el servidor Express
+El backend está en el directorio server/
+La base de datos usa Drizzle ORM para las migraciones
+Consideraciones importantes:
+Asegúrate de que el puerto 3000 (o el que configures) esté disponible
+La aplicación usa WebSocket para algunas funcionalidades, así que asegúrate de que tu entorno de pruebas soporte WebSocket
+Para desarrollo local, puedes usar npm run dev que iniciará tanto el servidor como el cliente en modo desarrollo
+Monitoreo:
+En modo desarrollo, tendrás acceso a los logs del servidor en la consola
+Los errores del frontend se mostrarán en el navegador
